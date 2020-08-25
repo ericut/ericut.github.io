@@ -26,16 +26,17 @@ export const TopWrapperRow = styled.div`
   height: 100%;
   max-height: 800px;
 `
-
 export const TopBackground = styled.div`
   background-image: url('./img/000-bg-01-top.jpg');
   width: 100%;
   max-height: 1363px;
+  min-height: 1363px;
   position: absolute;
   width: 100%;
   height: 100%;
   z-index: 1;
 `
+
 export const TopBall = styled.div`
   background-image: url('./img/001-topball.png');
   width: 1113px;
@@ -382,7 +383,7 @@ export const LogoContainer = styled.div`
   display: flex;
   justify-content: center;
   position: relative;
-  height: 60%;
+  height: 50%;
   max-height: 800px;
   align-items: center;
   z-index: 99;
