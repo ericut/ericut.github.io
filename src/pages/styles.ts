@@ -376,6 +376,7 @@ export const TopBallBlue = styled.div`
     }
   }
 `
+
 export const LogoContainer = styled.div`
   width: 100%;
   display: flex;
@@ -418,33 +419,45 @@ export const LogoContainer = styled.div`
 `
 export const LogoWhite = styled.img`
   animation-name: logoTopGlitch-White;
-  animation-duration: 1s;
+  animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   @keyframes logoTopGlitch-White {
     0% {
       transform: translate(0px);
     }
-    90% {
+    45% {
+      transform: translate(0px) scale(1);
+    }
+    46% {
+      transform: translate(0px) scale(1.1);
+    }
+    47% {
+      transform: translate(0px) scale(1);
+    }
+    60% {
       transform: translate(0px);
     }
-    91% {
-      transform: translate(150px, 50px);
+    61% {
+      transform: translate(30px, 20px);
     }
-    92% {
+    62% {
       transform: translate(0);
     }
-    95% {
+    75% {
       transform: translate(0);
     }
-    96% {
-      transform: translate(-250px, 150px);
+    76% {
+      transform: translate(-20px, 20px);
+    }
+    77% {
+      transform: translate(0);
     }
     97% {
       transform: translate(0);
     }
     98% {
-      transform: translate(-350px, -250px);
+      transform: translate(-20px, -10px);
     }
     99% {
       transform: translate(0);
@@ -456,39 +469,46 @@ export const LogoWhite = styled.img`
 `
 export const LogoRed = styled.img`
   animation-name: logoTopGlitch-Red;
-  animation-duration: 2.5s;
+  animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   @keyframes logoTopGlitch-Red {
     0% {
       transform: translate(0px);
+      opacity: 1;
     }
-    90% {
-      transform: translate(0px);
+    85% {
+      transform: translate(0px) scale(1);
     }
-    91% {
-      transform: translate(50px, -150px);
+    86% {
+      transform: translate(0px) scale(1.1);
     }
-    92% {
-      transform: translate(0);
+    87% {
+      transform: translate(0px) scale(1);
     }
     95% {
       transform: translate(0);
+      opacity: 1;
     }
     96% {
-      transform: translate(-150px, 250px);
+      transform: translate(-50px, 70px);
+      opacity: 0.6;
     }
     97% {
       transform: translate(0);
+      opacity: 1;
     }
     98% {
-      transform: translate(-150px, -275px);
+      transform: translate(-50px, -40px);
+      opacity: 0.2;
     }
     99% {
       transform: translate(0);
+      opacity: 0.7;
     }
     100% {
       transform: translate(0px);
+      opacity: 1;
     }
   }
 `
@@ -501,35 +521,53 @@ export const LogoBlue = styled.img`
     0% {
       transform: translate(0px);
     }
-    90% {
+    40% {
       transform: translate(0px);
+      opacity: 0.6;
     }
-    91% {
-      transform: translate(250px, 150px);
+    41% {
+      transform: translate(30px, 50px);
+      opacity: 0.8;
     }
-    92% {
+    42% {
       transform: translate(0);
+      opacity: 0.7;
     }
-    95% {
+    45% {
       transform: translate(0);
+      opacity: 0.5;
     }
-    96% {
-      transform: translate(-350px, 275px);
+    46% {
+      transform: translate(0);
+      opacity: 0.6;
+    }
+    55% {
+      transform: translate(0px) scale(1);
+    }
+    56% {
+      transform: translate(0px) scale(1.1);
+    }
+    57% {
+      transform: translate(0px) scale(1);
     }
     97% {
       transform: translate(0);
+      opacity: 0.2;
     }
     98% {
-      transform: translate(-450px, -320px);
+      transform: translate(-30px, -50px);
+      opacity: 0.7;
     }
     99% {
       transform: translate(0);
+      opacity: 1;
     }
     100% {
       transform: translate(0px);
     }
   }
 `
+
 export const SocialMediaContainer = styled.div`
   width: 100%;
   display: flex;
