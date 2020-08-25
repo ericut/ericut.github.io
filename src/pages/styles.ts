@@ -12,7 +12,7 @@ export const FullBody = styled.main`
   color: #ffffff;
   width: 100%;
   height: 100%;
-  min-height: 3000px;
+  min-height: 3200px;
   text-align: center;
   display: flex;
   flex-direction: column;
