@@ -45,7 +45,6 @@ const Main = ({ title = 'Eric Frank Li' }) => {
           <S.TopBallWhite className="anim-topBall-White"></S.TopBallWhite>
           <S.TopBallRed className="anim-topBall-Red"></S.TopBallRed>
           <S.TopBallBlue className="anim-topBall-Blue"></S.TopBallBlue>
-
           <S.TopWrapperRow className="row">
             <div className="column dcolumn h-100">
               <ParallaxLayer offset={0} speed={0.3}>
