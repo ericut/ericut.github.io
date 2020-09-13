@@ -12,7 +12,7 @@ export const FullBody = styled.main`
   );
   color: #ffffff;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   min-height: 3200px;
   text-align: center;
   display: flex;
@@ -20,12 +20,30 @@ export const FullBody = styled.main`
   align-items: center;
   position: relative;
 `
+
 export const TopContainer = styled.div`
   height: 100%;
+  min-height: 800px;
 `
 export const TopWrapperRow = styled.div`
   height: 100%;
   max-height: 800px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  z-index: 99;
+`
+export const TopWrapperColumn = styled.div`
+  height: 100%;
+  max-height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  flex-grow: 1;
+  flex-shrink: 1;
 `
 export const TopBackground = styled.div`
   background-image: url('./img/000-bg-01-top.png');
@@ -599,6 +617,132 @@ export const SocialMediaContainer = styled.div`
       transform: scale(1.2);
       filter: drop-shadow(3px 3px 0.5px #14fcff)
         drop-shadow(-3px -3px 0.5px #ff006e);
+    }
+  }
+`
+
+export const TopGlitchContainer = styled.div`
+  display: flex;
+  z-index: 999999;
+  width: 95%;
+  height: 50px;
+  position: relative;
+`
+export const GlitchLeftContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: -320px;
+  top: 0;
+`
+export const GlitchLeftWhite = styled.div`
+  background-image: url('./svg/003-bg-left-svg-white.svg');
+  height: 674px;
+  width: 554px;
+  position: absolute;
+  left: 0;
+  top: -240px;
+  z-index: 10;
+`
+export const GlitchLeftRed = styled.div`
+  background-image: url('./svg/003-bg-left-svg-red.svg');
+  height: 729px;
+  width: 815px;
+  position: absolute;
+  left: -260px;
+  top: -200px;
+`
+export const GlitchLeftBlue = styled.div`
+  background-image: url('./svg/003-bg-left-svg-blue.svg');
+  height: 645px;
+  width: 519px;
+  position: absolute;
+  left: 20px;
+  top: -225px;
+`
+export const GlitchRightContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: -380px;
+  top: 0;
+`
+export const GlitchRightWhite = styled.div`
+  background-image: url('./svg/003-bg-right-svg-white.svg');
+  height: 661px;
+  width: 682px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 9;
+`
+export const GlitchRightRed = styled.div`
+  background-image: url('./svg/003-bg-right-svg-red.svg');
+  height: 660px;
+  width: 667px;
+  position: absolute;
+  right: 0;
+  top: 100px;
+`
+export const GlitchRightBlue = styled.div`
+  background-image: url('./svg/003-bg-right-svg-blue.svg');
+  height: 637px;
+  width: 638px;
+  position: absolute;
+  right: -60px;
+  top: 30px;
+`
+
+export const AbilitiesContainer = styled.div``
+export const Ability = styled.div`
+  transition: 100s all ease-in;
+  padding: 0px 30px !important;
+  h3 {
+    transition: 1s all ease-in;
+    font-size: 28px;
+    filter: drop-shadow(1px 1px 0.5px #14fcff)
+      drop-shadow(-1px -1px 0.5px #ff006e);
+  }
+  p {
+    font-size: 16px;
+  }
+  &:hover {
+    transform: scale(15);
+    h3 {
+      filter: drop-shadow(3px 3px 0.5px #14fcff)
+        drop-shadow(-3px -3px 0.5px #ff006e);
+      animation-name: abilityGlitch;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      @keyframes abilityGlitch {
+        0% {
+          filter: drop-shadow(1px 1px 1px #14fcff)
+            drop-shadow(-1px -1px 1px #ff006e);
+        }
+        10% {
+          filter: drop-shadow(5px 5px 0.5px #14fcff)
+            drop-shadow(-5px -5px 0.5px #ff006e);
+        }
+        20% {
+          filter: drop-shadow(2px 5px 1px #14fcff)
+            drop-shadow(-5px -1px 3px #ff006e);
+        }
+        30% {
+          filter: drop-shadow(6px 2px 3px #14fcff)
+            drop-shadow(-2px -7px 2px #ff006e);
+        }
+        40% {
+          filter: drop-shadow(2px 5px 0.5px #14fcff)
+            drop-shadow(-5px -1px 0.5px #ff006e);
+        }
+        50% {
+          filter: drop-shadow(1px 1px 1px #14fcff)
+            drop-shadow(-1px -1px 1px #ff006e);
+        }
+      }
     }
   }
 `

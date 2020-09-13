@@ -49,8 +49,8 @@ const GlobalStyles = createGlobalStyle`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 100%;
-    /* max-width: 1360px; */
+    width: 90%;
+    max-width: 1580px;
   }
 
   .row {

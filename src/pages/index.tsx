@@ -19,6 +19,7 @@ const Main = ({ title = 'Eric Frank Li' }) => {
   // @ts-ignore
   const onMoving = ({ clientX: x, clientY: y }) =>
     setNewSpring({ xy: calc(x, y) })
+
   const logoWhite = (x: number, y: number) =>
     `translate3d(${x / 51}px,${y / 50}px,0)`
   const logoRed = (x: number, y: number) =>
@@ -32,19 +33,26 @@ const Main = ({ title = 'Eric Frank Li' }) => {
     config: { mass: 10, tension: 550, friction: 140 },
   }))
 
+  const glitchWhite = (x: number, y: number) =>
+    `translate3d(${x / 31}px,${y / 34}px,0)`
+  const glitchRed = (x: number, y: number) =>
+    `translate3d(${x / 41}px,${y / 36}px,0)`
+  const glitchBlue = (x: number, y: number) =>
+    `translate3d(${x / 21}px,${y / 49}px,0)`
+
   return (
     <Parallax pages={3} scrolling={true}>
       <S.FullBody onMouseMove={onMoving}>
         <S.TopContainer className="container">
           <ParallaxLayer offset={0} speed={-0.2}>
-            <S.TopBackground></S.TopBackground>
+            <S.TopBackground />
           </ParallaxLayer>
-          <S.TopBall className="anim-topBall"></S.TopBall>
-          <S.TopBallWhite className="anim-topBall-White"></S.TopBallWhite>
-          <S.TopBallRed className="anim-topBall-Red"></S.TopBallRed>
-          <S.TopBallBlue className="anim-topBall-Blue"></S.TopBallBlue>
-          <S.TopWrapperRow className="row">
-            <div className="column dcolumn h-100">
+          <S.TopBall className="anim-topBall" />
+          <S.TopBallWhite className="anim-topBall-White" />
+          <S.TopBallRed className="anim-topBall-Red" />
+          <S.TopBallBlue className="anim-topBall-Blue" />
+          <S.TopWrapperRow>
+            <S.TopWrapperColumn>
               <ParallaxLayer offset={0} speed={0.3}>
                 <S.LogoContainer>
                   <animated.div
@@ -114,10 +122,78 @@ const Main = ({ title = 'Eric Frank Li' }) => {
                   </animated.div>
                 </S.SocialMediaContainer>
               </ParallaxLayer>
-            </div>
+            </S.TopWrapperColumn>
           </S.TopWrapperRow>
-          <div className="row"></div>
         </S.TopContainer>
+        <S.TopGlitchContainer>
+          <S.GlitchLeftContainer>
+            <ParallaxLayer offset={0.5} speed={0.3}>
+              <animated.div
+                // @ts-ignore
+                style={{ transform: newSpring.xy.interpolate(glitchWhite) }}
+              >
+                <S.GlitchLeftWhite />
+              </animated.div>
+              <animated.div
+                // @ts-ignore
+                style={{ transform: newSpring.xy.interpolate(glitchRed) }}
+              >
+                <S.GlitchLeftRed />
+              </animated.div>
+              <animated.div
+                // @ts-ignore
+                style={{ transform: newSpring.xy.interpolate(glitchBlue) }}
+              >
+                <S.GlitchLeftBlue />
+              </animated.div>
+            </ParallaxLayer>
+          </S.GlitchLeftContainer>
+          <S.GlitchRightContainer>
+            <ParallaxLayer offset={0.6} speed={0.7}>
+              <animated.div
+                // @ts-ignore
+                style={{ transform: newSpring.xy.interpolate(glitchWhite) }}
+              >
+                <S.GlitchRightWhite />
+              </animated.div>
+              <animated.div
+                // @ts-ignore
+                style={{ transform: newSpring.xy.interpolate(glitchRed) }}
+              >
+                <S.GlitchRightRed />
+              </animated.div>
+              <animated.div
+                // @ts-ignore
+                style={{ transform: newSpring.xy.interpolate(glitchBlue) }}
+              >
+                <S.GlitchRightBlue />
+              </animated.div>
+            </ParallaxLayer>
+          </S.GlitchRightContainer>
+          <S.GlitchRightContainer></S.GlitchRightContainer>
+        </S.TopGlitchContainer>
+        <S.AbilitiesContainer className="container">
+          <div className="row">
+            <S.Ability className="column">
+              <h3>Designer de Interfaces</h3>
+              <p>
+                Criação de layouts e interfaces priorizando a experiência do
+                usuário
+              </p>
+            </S.Ability>
+            <S.Ability className="column">
+              <h3>Desenvolvedor Web Moderno</h3>
+              <p>
+                Desenvolvimento de aplicações web e mobile em tecnologias
+                modernas como ReactJS e React Native
+              </p>
+            </S.Ability>
+            <S.Ability className="column">
+              <h3>Desenvolvedor WordPress</h3>
+              <p>Criação de sites e lojas virtuais em WordPress</p>
+            </S.Ability>
+          </div>
+        </S.AbilitiesContainer>
       </S.FullBody>
     </Parallax>
   )
