@@ -4,10 +4,11 @@ export const FullBody = styled.main`
   background-color: #2b071e;
   background-image: linear-gradient(
     to bottom,
-    #250e1e 0%,
-    #2b071e 25%,
-    #29061e 50%,
-    #26071c 100%
+    #2a0b23 0%,
+    #141620 25%,
+    #10161e 50%,
+    #09161b 75%,
+    #071b22 100%
   );
   color: #ffffff;
   width: 100%;
@@ -27,7 +28,7 @@ export const TopWrapperRow = styled.div`
   max-height: 800px;
 `
 export const TopBackground = styled.div`
-  background-image: url('./img/000-bg-01-top.jpg');
+  background-image: url('./img/000-bg-01-top.png');
   width: 100%;
   max-height: 1363px;
   min-height: 1363px;
@@ -596,8 +597,8 @@ export const SocialMediaContainer = styled.div`
     cursor: pointer;
     &:hover {
       transform: scale(1.2);
-      filter: drop-shadow(3px 3px 0.5px #00fff0)
-        drop-shadow(-3px -3px 0.5px #d3021a);
+      filter: drop-shadow(3px 3px 0.5px #14fcff)
+        drop-shadow(-3px -3px 0.5px #ff006e);
     }
   }
 `

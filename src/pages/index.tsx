@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import { useSpring, animated } from 'react-spring/web.cjs'
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
 
@@ -31,8 +31,6 @@ const Main = ({ title = 'Eric Frank Li' }) => {
     xy: [0, 0],
     config: { mass: 10, tension: 550, friction: 140 },
   }))
-
-  // const refParallax = useRef<Parallax>()
 
   return (
     <Parallax pages={3} scrolling={true}>
@@ -118,7 +116,7 @@ const Main = ({ title = 'Eric Frank Li' }) => {
               </ParallaxLayer>
             </div>
           </S.TopWrapperRow>
-          <div className="row">{/* <div className="column">specs</div> */}</div>
+          <div className="row"></div>
         </S.TopContainer>
       </S.FullBody>
     </Parallax>

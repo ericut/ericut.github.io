@@ -64,6 +64,7 @@ const GlobalStyles = createGlobalStyle`
 
   .column {
     flex-basis: calc(calc(800px - 100%) * 999);
+    width: 100%;
     padding: 10px;
     flex-grow: 1;
     flex-shrink: 1;
@@ -82,6 +83,14 @@ const GlobalStyles = createGlobalStyle`
   .h-100 {
     height: 100%;
     max-height: 100%;
+  }
+
+  .txt-red {
+    color: #ff006e;
+  }
+
+  .txt-blue {
+    color: #00fcff;
   }
 `
 
