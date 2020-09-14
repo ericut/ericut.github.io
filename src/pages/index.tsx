@@ -40,6 +40,15 @@ const Main = ({ title = 'Eric Frank Li' }) => {
   const glitchBlue = (x: number, y: number) =>
     `translate3d(${x / 21}px,${y / 49}px,0)`
 
+  const glitchPhotoImage = (x: number, y: number) =>
+    `translate3d(${x / 50}px,${y / 10}px,0)`
+  const glitchPhotoWhite = (x: number, y: number) =>
+    `translate3d(${x / 50}px,${y / 15}px,0)`
+  const glitchPhotoRed = (x: number, y: number) =>
+    `translate3d(${x / 50}px,${y / 20}px,0)`
+  const glitchPhotoBlue = (x: number, y: number) =>
+    `translate3d(${x / 50}px,${y / 25}px,0)`
+
   return (
     <Parallax pages={3} scrolling={true}>
       <S.FullBody onMouseMove={onMoving}>
@@ -194,6 +203,78 @@ const Main = ({ title = 'Eric Frank Li' }) => {
             </S.Ability>
           </div>
         </S.AbilitiesContainer>
+        <S.AboutMeContainer className="container">
+          <div className="row">
+            <S.AboutPhoto className="column">
+              <animated.div
+                style={{
+                  // @ts-ignore
+                  transform: newSpring.xy.interpolate(glitchPhotoImage),
+                }}
+                className="aboutPhoto-Image"
+              >
+                <S.AboutPhotoImage />
+              </animated.div>
+              <animated.div
+                style={{
+                  // @ts-ignore
+                  transform: newSpring.xy.interpolate(glitchPhotoWhite),
+                }}
+              >
+                <S.AboutPhotoGlitchWhite />
+              </animated.div>
+              <animated.div
+                style={{
+                  // @ts-ignore
+                  transform: newSpring.xy.interpolate(glitchPhotoRed),
+                }}
+              >
+                <S.AboutPhotoGlitchRed />
+              </animated.div>
+              <animated.div
+                style={{
+                  // @ts-ignore
+                  transform: newSpring.xy.interpolate(glitchPhotoBlue),
+                }}
+              >
+                <S.AboutPhotoGlitchBlue />
+              </animated.div>
+            </S.AboutPhoto>
+            <S.AboutText className="column">
+              <p>
+                Me chamo <strong>Eric Frank Li</strong> sou{' '}
+                <strong>Desenvolvedor Frontend UX/UI</strong>, formado em
+                publicidade/propaganda, e especialista em desenvolvimento de
+                interfaces web focando na experiência do usuário. Trabalho
+                desenvolvendo aplicações web com tecnologias modernas como{' '}
+                <strong>JavaScript, ReactJS e ReactNative</strong> utilizando
+                metodologias responsivas. Buscando conhecimento, novas
+                tecnologias e metodologias de desenvolvimento atualmente faço
+                especialização em <strong>Tecnologia e Inovação WEB</strong> e o{' '}
+                <strong>Bootcamp GoStack da Rocketseat</strong>.{' '}
+              </p>
+            </S.AboutText>
+          </div>
+        </S.AboutMeContainer>
+        <S.FooterContainer className="container">
+          <ParallaxLayer offset={0.1} speed={0.6}>
+            <S.FooterBackground />
+          </ParallaxLayer>
+          <div className="row footerInfos">
+            <S.FooterLogo />
+            <S.FooterContact>
+              17 <strong>981575816 • contato@ericli.com.br</strong>
+            </S.FooterContact>
+          </div>
+        </S.FooterContainer>
+        <S.MontainsContainer>
+          <ParallaxLayer offset={0.35} speed={0.2}>
+            <S.MontainImage />
+            <S.MontainGlitchWhite />
+            <S.MontainGlitchRed />
+            <S.MontainGlitchBlue />
+          </ParallaxLayer>
+        </S.MontainsContainer>
       </S.FullBody>
     </Parallax>
   )

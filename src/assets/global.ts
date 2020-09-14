@@ -45,7 +45,6 @@ const GlobalStyles = createGlobalStyle`
   }
 
   .container {
-    z-index: 999999;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

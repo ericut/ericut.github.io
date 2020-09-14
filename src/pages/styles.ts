@@ -13,7 +13,7 @@ export const FullBody = styled.main`
   color: #ffffff;
   width: 100%;
   /* height: 100%; */
-  min-height: 3200px;
+  min-height: 100%;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -24,10 +24,12 @@ export const FullBody = styled.main`
 export const TopContainer = styled.div`
   height: 100%;
   min-height: 800px;
+  /* max-height: 100%; */
 `
 export const TopWrapperRow = styled.div`
   height: 100%;
   max-height: 800px;
+  /* min-height: 100%; */
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -745,4 +747,132 @@ export const Ability = styled.div`
       }
     }
   }
+`
+
+export const AboutMeContainer = styled.div`
+  height: 1010px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 200px 0 0 0;
+  z-index: 9999;
+`
+export const AboutPhoto = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  .aboutPhoto-Image {
+    z-index: 99999;
+  }
+`
+export const AboutPhotoImage = styled.div`
+  background-image: url('./img/004-efl-photo.png');
+  width: 531px;
+  height: 703px;
+`
+export const AboutPhotoGlitchWhite = styled.div`
+  background-image: url('./svg/004-efl-photo-losan-white.svg');
+  height: 700px;
+  width: 690px;
+  position: absolute;
+  right: 20px;
+  top: 11px;
+`
+export const AboutPhotoGlitchRed = styled.div`
+  background-image: url('./svg/004-efl-photo-losan-red.svg');
+  height: 726px;
+  width: 848px;
+  position: absolute;
+  right: -125px;
+  top: 60px;
+`
+export const AboutPhotoGlitchBlue = styled.div`
+  background-image: url('./svg/004-efl-photo-losan-blue.svg');
+  height: 718px;
+  width: 690px;
+  position: absolute;
+  right: 40px;
+  top: -50px;
+`
+export const AboutText = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 0 80px 0 40px !important;
+  p {
+    text-align: left;
+    line-height: 1.6em;
+    font-size: 16px;
+    letter-spacing: 0.2px;
+  }
+`
+
+export const FooterContainer = styled.div`
+  height: 100%;
+  z-index: 1;
+  .footerInfos {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 200px 0;
+  }
+`
+export const FooterBackground = styled.div`
+  background-image: url('./img/000-bg-02-bottom.png');
+  width: 100%;
+  max-height: 2621px;
+  min-height: 2621px;
+  position: absolute;
+  height: 100%;
+  z-index: 1;
+`
+export const FooterLogo = styled.div`
+  background-image: url('./svg/005-elf-logo-bottom.svg');
+  z-index: 2;
+  width: 184px;
+  height: 119px;
+`
+export const FooterContact = styled.div`
+  font-size: 20px;
+  margin: 30px 0 0 0;
+`
+
+export const MontainsContainer = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  position: relative;
+  z-index: 9999;
+`
+export const MontainImage = styled.div`
+  background-image: url('./img/005-montain.png');
+  width: 100%;
+  height: 412px;
+  position: absolute;
+  z-index: 99;
+  top: -50px;
+`
+export const MontainGlitchWhite = styled.div`
+  background-image: url('./img/005-montain-white.png');
+  width: 100%;
+  height: 412px;
+  position: absolute;
+  z-index: 99;
+  top: 10px;
+`
+export const MontainGlitchRed = styled.div`
+  background-image: url('./img/005-montain-red.png');
+  width: 100%;
+  height: 412px;
+  position: absolute;
+  z-index: 99;
+  top: 10px;
+`
+export const MontainGlitchBlue = styled.div`
+  background-image: url('./img/005-montain-blue.png');
+  width: 100%;
+  height: 412px;
+  position: absolute;
+  z-index: 99;
+  top: 10px;
 `
